@@ -1,0 +1,26 @@
+{
+  "name": "php-ino/php-ino",
+  "description": "controlling the arduino through the usb port",
+  "minimum-stability": "stable",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Marcos Arthur",
+      "email": "cruzartur61@gmail.com",
+      "homepage": "https://marcosarthur.github.io/",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Source\\": "source/"
+    }, "files": [
+      "config.php"
+    ]
+  },
+  "require": {
+    "coffeecode/router": "^1.0",
+    "league/plates": "4.0.0-alpha",
+    "vlucas/phpdotenv": "^5.3"
+  }
+}
