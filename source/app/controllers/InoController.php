@@ -3,12 +3,11 @@
 
 namespace Source\app\controllers;
 
-
 use League\Plates\Engine;
 
-use Source\app\support\ConectionPort;
+use Source\app\support\ConnectionPort;
 
-class WebController
+class InoController
 {
     private $view;
     private $state;
@@ -27,21 +26,18 @@ class WebController
     {
         $this->setState();
 
-        $conection = new ConectionPort(getenv('PORT'));
+        $connection = new ConnectionPort(getenv('PORT'));
 
-        $conection->init();
+        $connection->init();
 
-        if ($conection->process($this->getState())) {
+        if ($connection->process($this->getState())) {
             echo json_encode(array(
-                'sucess' => 'conection sucess ful'
+                'sucess' => 'conection sucess full'
             ));
             return;
         }
 
-
         echo json_encode(array('error' => "FATAL ERROR"));
-
-
     }
 
     private function setState() : void

@@ -15,7 +15,8 @@
     "psr-4": {
       "Source\\": "source/"
     }, "files": [
-      "config.php"
+      "source/config/env.php",
+      "source/routes/routes.php"
     ]
   },
   "require": {

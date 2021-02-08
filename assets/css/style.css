@@ -1,0 +1,5 @@
+* {margin: 0px; padding: 0px; box-sizing: border-box;}
+.container {background: #2ecc71; width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center;}
+.chave {width: 40%; height: 43vh; background: #ecf0f1; border-radius: 180px; display: flex; overflow: hidden; align-items: center; }
+.button {width: 50%;  height: 100%; transition: all .2s; background: #27ae60; border-radius: 48%;cursor: pointer; color: white; display: flex;align-items: center; justify-content: center;}
+.button.transform {transform: translateX(100%)}

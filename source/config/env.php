@@ -6,7 +6,7 @@ $repository = Dotenv\Repository\RepositoryBuilder::createWithNoAdapters()
     ->immutable()
     ->make();
 
-$dotenv = Dotenv\Dotenv::create($repository, __DIR__);
+$dotenv = Dotenv\Dotenv::create($repository, __DIR__."/../../");
 $dotenv->load();
 
 

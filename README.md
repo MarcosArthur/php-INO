@@ -7,7 +7,6 @@ Control your arduino over the Internet with this simple project just connect the
 
 Connect an Arduino serial port to any USB port on your server.
 
-
 #### CONFIGURE 
 
 Create file .env

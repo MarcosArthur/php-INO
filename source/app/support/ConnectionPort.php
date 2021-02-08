@@ -4,7 +4,7 @@ namespace Source\app\support;
 
 use Exception;
 
-class ConectionPort
+class ConnectionPort
 {
 
     private $porthandle;  
@@ -16,26 +16,22 @@ class ConectionPort
             if ($this->porthandle) {
                 throw new Exception("FAIL OPEN PORT");
             }
-
         } catch (Exception $error) {
-            echo "FAIL OPEN PORT";
-            exit();
+           throw $error;
         }
     }
 
-    public function process($state) : bool
+    public function process($state)
     {
         try {
             fwrite($this->porthandle, $state);
             $this->finish();
             return true;
         } catch (Exception $error) {
-            echo "FAIL PROCESS WRITE PORT";
-            exit();
-            
+            throw $error;
         }
     }
-
+    
     private function finish()
     {
         fclose($this->porthandle);
