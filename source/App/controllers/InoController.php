@@ -1,20 +1,18 @@
 <?php
 
 
-namespace Source\app\controllers;
+namespace Source\App\controllers;
 
-use League\Plates\Engine;
+use Source\App\support\ConnectionPort;
 
-use Source\app\support\ConnectionPort;
-
-class InoController
+class InoController extends Controller
 {
-    private $view;
+   
     private $state;
 
     public function __construct()
     {
-        $this->view = Engine::create(__DIR__."/../../theme", "php");
+        parent::__construct();
     }
 
     public function index() : void

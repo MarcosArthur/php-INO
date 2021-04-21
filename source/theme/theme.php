@@ -17,36 +17,12 @@
         </div>
     </main>
 
-    <script src="<?=getenv('BASE_URL');?>"></script>
+    <script src="<?=getenv('BASE_URL');?>/assets/js/Request.js"></script>
+    <script src="<?=getenv('BASE_URL');?>/assets/js/Ino.js"></script>
     <script>
-
-        document.querySelector('.button').addEventListener('click', e => {
-            e.target.classList.toggle('transform');
-            if (e.target.classList.contains('transform')) {
-                e.target.textContent = "Off";
-                request('h');
-            } else {
-                request('l');
-                e.target.textContent = "On";
-            }
-
-        })
-
-        function request(status) {
-            let form = new FormData();
-
-            form.append("state", status);
-            fetch(`./state`, {
-                method: "POST",
-                body:form
-            })
-            .then(response => response.json())
-            .then(response => {
-                if (response.sucess) {
-
-                }
-            });
-        }
+        let base_url = '<?=getenv("BASE_URL");?>'; 
+        let ino = new Ino(base_url);
+        ino.init();
     </script>
 </body>
 </html>

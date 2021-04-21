@@ -20,6 +20,8 @@ class Request {
                 }
 
 
+            }).catch(e => {
+                console.log(e.getMessage())
             });
     }
 }

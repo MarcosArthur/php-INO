@@ -13,6 +13,7 @@ Create file .env
 
 ```markdown
 PORT=TTYUSB0
+BASE_URL=http://localhost/php-ino/
 ```
 
 Creation of the file place the door that is connected with the arduino serial the example above i placed the door standard using on linux systems on windows these doors are called with.
